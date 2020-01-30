@@ -1,4 +1,4 @@
-#include "List.h"
+ï»¿#include "List.h"
 #include <ctime>
 
 int main()
@@ -15,7 +15,7 @@ int main()
 		system("cls");
 		PrintList(list);
 		PrintMenu();
-		cout << "\nÂâåäèòå ïóíêò ìåíþ: ";
+		cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿ÑƒÐ½ÐºÑ‚ Ð¼ÐµÐ½ÑŽ: ";
 		switch (GetValue(0, 8))
 		{
 		case 1:
@@ -27,19 +27,19 @@ int main()
 		{
 			if (list->Size > 0)
 			{
-				cout << "Ââåäèòå èíäåêñ: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ: ";
 				DeleteNode(list, GetValue(0, list->Size - 1));
 			}
 			else
 			{
-				cout << "Ñïèñîê ïóñò!\n";
+				cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚!\n";
 				system("pause");
 			}
 			break;
 		}
 		case 3:
 		{
-			cout << "Ââåäèòå çíà÷åíèå: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 			value = GetValue(INT_MIN, INT_MAX);
 
 			clock_t begin = clock();
@@ -53,7 +53,7 @@ int main()
 		}
 		case 4:
 		{
-			cout << "Ââåäèòå çíà÷åíèå: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 			value = GetValue(INT_MIN, INT_MAX);
 			InsertNode(list, list->Size, value);
 			break;
@@ -62,15 +62,15 @@ int main()
 		{
 			if (list->Size == 0)
 			{
-				cout << "Â ñïèñêå íåò ýëåìåíòîâ!\n";
+				cout << "Ð’ ÑÐ¿Ð¸ÑÐºÐµ Ð½ÐµÑ‚ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²!\n";
 				system("pause");
 				break;
 			}
 			else
 			{
-				cout << "Ââåäèòå èíäåêñ ýëåìåíòà: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 				index = GetValue(0, list->Size - 1) + 1;
-				cout << "Ââåäèòå çíà÷åíèå: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 				value = GetValue(INT_MIN, INT_MAX);
 
 				clock_t begin = clock();
@@ -87,15 +87,15 @@ int main()
 		{
 			if (list->Size == 0)
 			{
-				cout << "Â ñïèñêå íåò ýëåìåíòîâ!\n";
+				cout << "Ð’ ÑÐ¿Ð¸ÑÐºÐµ Ð½ÐµÑ‚ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²!\n";
 				system("pause");
 				break;
 			}
 			else
 			{
-				cout << "Ââåäèòå èíäåêñ ýëåìåíòà: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 				index = GetValue(0, list->Size - 1);
-				cout << "Ââåäèòå çíà÷åíèå: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 				value = GetValue(INT_MIN, INT_MAX);
 				InsertNode(list, index, value);
 				break;
@@ -108,7 +108,7 @@ int main()
 		}
 		case 8:
 		{
-			cout << "Ââåäèòå çíà÷åíèå ýëåìåíòà: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 			LinearSearch(list, GetValue(INT_MIN, INT_MAX));
 			cout << endl;
 			system("pause");
