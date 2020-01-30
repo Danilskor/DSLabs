@@ -48,6 +48,7 @@ void DynamicArray(ArrayStucture *structureArray)
 	}
 };
 
+//Это меню должно быть не тут
 void Menu(ArrayStucture * structureArray)
 {
 	int index = 0;
