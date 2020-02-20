@@ -3,6 +3,7 @@
 
 int main()
 {
+	//Просто комментарий
 	setlocale(LC_ALL, "Rus");
 	srand(time(nullptr));
 	MainMenu();
