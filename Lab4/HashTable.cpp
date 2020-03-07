@@ -1,4 +1,4 @@
-#include "HashTable.h"
+ï»¿#include "HashTable.h"
 #include "Lab4Output.h"
 
 HashTable* CreateTable(int size)
@@ -91,7 +91,7 @@ string FindNode(HashTable* hashTable, string key, string value)
 	}
 	else
 	{
-		return "ÍÅ ÍÀÉÄÅÍÎ";
+		return "ĞĞ• ĞĞĞ™Ğ”Ğ•ĞĞ";
 	}
 	if (currentNode->Key == key && currentNode->Value == value)
 	{
@@ -99,7 +99,7 @@ string FindNode(HashTable* hashTable, string key, string value)
 	}
 	else
 	{
-		return "ÍÅ ÍÀÉÄÅÍÎ";
+		return "ĞĞ• ĞĞĞ™Ğ”Ğ•ĞĞ";
 	}
 }
 

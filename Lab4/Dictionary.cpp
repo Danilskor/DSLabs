@@ -1,4 +1,4 @@
-#include "Dictionary.h"
+ï»¿#include "Dictionary.h"
 #include "Lab4Output.h"
 
 Dictionary* CreateDictionary()
@@ -23,7 +23,7 @@ string FindEntry(Dictionary* dictionary, string key)
 		}
 		else
 		{
-			return "ÍÅ ÍÀÉÄÅÍÎ";
+			return "ĞĞ• ĞĞĞ™Ğ”Ğ•ĞĞ";
 		}
 		if (currentNode->Key == key)
 		{
@@ -31,7 +31,7 @@ string FindEntry(Dictionary* dictionary, string key)
 		}
 		else
 		{
-			return "ÍÅ ÍÀÉÄÅÍÎ";
+			return "ĞĞ• ĞĞĞ™Ğ”Ğ•ĞĞ";
 		}
 	}
 }

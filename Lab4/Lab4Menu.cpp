@@ -1,4 +1,4 @@
-#include "Lab4Menu.h"
+Ôªø#include "Lab4Menu.h"
 
 int MenuHashTable(HashTable* hashTable)
 {
@@ -53,7 +53,7 @@ int MenuHashTable(HashTable* hashTable)
 				if (hashTable->Length != 0)
 				{
 					PrintEnterKey();
-					if (FindNode(hashTable, key, value) == "Õ≈ Õ¿…ƒ≈ÕŒ")
+					if (FindNode(hashTable, key, value) == "–ù–ï –ù–ê–ô–î–ï–ù–û")
 					{
 						FindErrorMessage();
 					}
@@ -118,7 +118,7 @@ int MenuDictionary(Dictionary* dictionary)
 				{
 					PrintEnterKey();
 					string key = InputString();
-					if (FindEntry(dictionary, key) == "Õ≈ Õ¿…ƒ≈ÕŒ")
+					if (FindEntry(dictionary, key) == "–ù–ï –ù–ê–ô–î–ï–ù–û")
 					{
 						FindErrorMessage();
 					}

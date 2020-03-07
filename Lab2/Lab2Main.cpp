@@ -1,4 +1,4 @@
-#include "List.h"
+ï»¿#include "List.h"
 #include <ctime>
 #include "Lab2Main.h"
 
@@ -17,7 +17,7 @@ int Lab2Main()
 		system("cls");
 		PrintList(list);
 		PrintMenu();
-		cout << "\nÂâåäèòå ïóíêò ìåíþ: ";
+		cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿ÑƒÐ½ÐºÑ‚ Ð¼ÐµÐ½ÑŽ: ";
 		switch (GetValue(0, 8))
 		{
 			case 1: 
@@ -29,19 +29,19 @@ int Lab2Main()
 			{
 				if (list->Size > 2)
 				{
-					cout << "Ââåäèòå èíäåêñ: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ: ";
 					DeleteNode(list, GetValue(0, list->Size - 1));
 				}
 				else
 				{
-					cout << "Ìèíèìàëüíû ðàçìåð ñïèñêà 2.\n";
+					cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ñ‹ Ñ€Ð°Ð·Ð¼ÐµÑ€ ÑÐ¿Ð¸ÑÐºÐ° 2.\n";
 					system("pause");
 				}
 				break;
 			}
 			case 3:
 			{
-				cout << "Ââåäèòå çíà÷åíèå: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 				value = GetValue(INT_MIN, INT_MAX);
 
 				clock_t begin = clock();
@@ -55,16 +55,16 @@ int Lab2Main()
 			}
 			case 4:
 			{
-				cout << "Ââåäèòå çíà÷åíèå: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 				value = GetValue(INT_MIN, INT_MAX);
 				InsertNode(list, list->Size, value);
 				break;
 			}
 			case 5:
 			{
-				cout << "Ââåäèòå èíäåêñ ýëåìåíòà: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 				index = GetValue(0, list->Size - 1) + 1;
-				cout << "Ââåäèòå çíà÷åíèå: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 				value = GetValue(INT_MIN, INT_MAX);
 
 				clock_t begin = clock();
@@ -78,9 +78,9 @@ int Lab2Main()
 			}
 			case 6:
 			{
-				cout << "Ââåäèòå èíäåêñ ýëåìåíòà: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 				index = GetValue(0, list->Size - 1);
-				cout << "Ââåäèòå çíà÷åíèå: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 				value = GetValue(INT_MIN, INT_MAX);
 				InsertNode(list, index, value);
 				break;
@@ -92,7 +92,7 @@ int Lab2Main()
 			}
 			case 8: 
 			{
-				cout << "Ââåäèòå çíà÷åíèå ýëåìåíòà: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°: ";
 				LinearSearch(list, GetValue(INT_MIN, INT_MAX));
 				cout << endl;
 				system("pause");

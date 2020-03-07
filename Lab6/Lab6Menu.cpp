@@ -1,4 +1,4 @@
-#include "Lab6Menu.h"
+ï»¿#include "Lab6Menu.h"
 
 void Lab6Menu()
 {
@@ -51,16 +51,16 @@ void AVLMenu()
 			case 1:
 			{
 				system("cls");
-				cout << "Ââåäèòå çíà÷åíèå: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 				int value = GetValue(INT_MIN, INT_MAX);
 				std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 				tree->Root = Insert(tree->Root, value, tree);
 				std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-				std::cout << "Âðåìÿ = " << 
+				std::cout << "Ð’Ñ€ÐµÐ¼Ñ = " << 
 					std::chrono::duration_cast<std::chrono::nanoseconds> (end - begin).count() 
 					<< "[ns]" << std::endl;
 
-				cout << "Ïîâîðîòîâ: " << tree->NumberOfRotation;
+				cout << "ÐŸÐ¾Ð²Ð¾Ñ€Ð¾Ñ‚Ð¾Ð²: " << tree->NumberOfRotation;
 				cout << endl;
 				system("pause");
 				cout << endl;
@@ -69,16 +69,16 @@ void AVLMenu()
 			case 2:
 			{
 				system("cls");
-				cout << "Ââåäèòå çíà÷åíèå: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 				int value = GetValue(INT_MIN, INT_MAX);
 				std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 				tree->Root = DeleteNode(value, tree->Root, tree);
 				std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-				std::cout << "Âðåìÿ = " <<
+				std::cout << "Ð’Ñ€ÐµÐ¼Ñ = " <<
 					std::chrono::duration_cast<std::chrono::nanoseconds> (end - begin).count()
 					<< "[ns]" << std::endl;
 
-				cout << "Ïîâîðîòîâ: " << tree->NumberOfRotation;
+				cout << "ÐŸÐ¾Ð²Ð¾Ñ€Ð¾Ñ‚Ð¾Ð²: " << tree->NumberOfRotation;
 				cout << endl;
 				system("pause");
 				cout << endl;
@@ -87,7 +87,7 @@ void AVLMenu()
 			case 3:
 			{
 				system("cls");
-				cout << "Ââåäèòå çíà÷åíèå: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 				int value = GetValue(INT_MIN, INT_MAX);
 				if (FindNode(tree->Root, value) != nullptr)
 				{
@@ -95,7 +95,7 @@ void AVLMenu()
 					Node* node = FindNode(tree->Root, value);
 					cout << node->Data << endl;
 					std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-					std::cout << "Âðåìÿ = " <<
+					std::cout << "Ð’Ñ€ÐµÐ¼Ñ = " <<
 						std::chrono::duration_cast<std::chrono::nanoseconds> (end - begin).count()
 						<< "[ns]" << std::endl;
 					system("pause");
@@ -104,9 +104,9 @@ void AVLMenu()
 				else
 				{
 					std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
-					cout << "Íå íàéäåíî\n";
+					cout << "ÐÐµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð¾\n";
 					std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-					std::cout << "Âðåìÿ = " <<
+					std::cout << "Ð’Ñ€ÐµÐ¼Ñ = " <<
 						std::chrono::duration_cast<std::chrono::nanoseconds> (end - begin).count()
 						<< "[ns]" << std::endl;
 					system("pause");
@@ -117,7 +117,7 @@ void AVLMenu()
 			case 4:
 			{
 				system("cls");
-				cout << "ÂÂåäèòå êîëè÷åñòâî äîáàâëÿåìûõ çíà÷åíèé: ";
+				cout << "Ð’Ð’ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð´Ð¾Ð±Ð°Ð²Ð»ÑÐµÐ¼Ñ‹Ñ… Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ð¹: ";
 				int numberOfNode = GetValue(INT_MIN, INT_MAX);
 				for (int i = 0; i < numberOfNode; i++)
 				{
@@ -150,36 +150,36 @@ void RedBlackTree()
 			case 1:
 			{
 				system("cls");
-				cout << "Ââåäèòå çíà÷åíèå: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 				int value = GetValue(INT_MIN, INT_MAX);
 				std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 
 				InsertNode(value, tree->Root, tree);
 
 				std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-				std::cout << "Âðåìÿ = " <<
+				std::cout << "Ð’Ñ€ÐµÐ¼Ñ = " <<
 					std::chrono::duration_cast<std::chrono::nanoseconds> (end - begin).count()
 					<< "[ns]" << std::endl;
 
-				cout << "Ïîâîðîòîâ: " << tree->NumberOfRotation;
+				cout << "ÐŸÐ¾Ð²Ð¾Ñ€Ð¾Ñ‚Ð¾Ð²: " << tree->NumberOfRotation;
 				cout << endl;
 				break;
 			}
 			case 2:
 			{
 				system("cls");
-				cout << "Ââåäèòå çíà÷åíèå: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 				int value = GetValue(INT_MIN, INT_MAX);
 				std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 
 				DeleteNodeByData(value, tree);
 
 				std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-				std::cout << "Âðåìÿ = " <<
+				std::cout << "Ð’Ñ€ÐµÐ¼Ñ = " <<
 					std::chrono::duration_cast<std::chrono::nanoseconds> (end - begin).count()
 					<< "[ns]" << std::endl;
 
-				cout << "Ïîâîðîòîâ: " << tree->NumberOfRotation;
+				cout << "ÐŸÐ¾Ð²Ð¾Ñ€Ð¾Ñ‚Ð¾Ð²: " << tree->NumberOfRotation;
 				cout << endl;
 				cout << endl;
 				break;
@@ -187,16 +187,16 @@ void RedBlackTree()
 			case 3:
 			{
 				system("cls");
-				cout << "Ââåäèòå çíà÷åíèå: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: ";
 				int value = GetValue(INT_MIN, INT_MAX);
 				if (SearchNode(tree->Root, value, tree->Nil) == tree->Nil)
 				{
 					std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
 
-					cout << "Íåò òàêîãî çíà÷åíèÿ\n";
+					cout << "ÐÐµÑ‚ Ñ‚Ð°ÐºÐ¾Ð³Ð¾ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ\n";
 
 					std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-					std::cout << "Âðåìÿ = " <<
+					std::cout << "Ð’Ñ€ÐµÐ¼Ñ = " <<
 						std::chrono::duration_cast<std::chrono::nanoseconds> (end - begin).count()
 						<< "[ns]" << std::endl;
 					cout << endl;
@@ -209,7 +209,7 @@ void RedBlackTree()
 					cout << node->Data << endl;
 
 					std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-					std::cout << "Âðåìÿ = " <<
+					std::cout << "Ð’Ñ€ÐµÐ¼Ñ = " <<
 						std::chrono::duration_cast<std::chrono::nanoseconds> (end - begin).count()
 						<< "[ns]" << std::endl;
 					cout << endl;
@@ -219,7 +219,7 @@ void RedBlackTree()
 			case 4:
 			{
 				system("cls");
-				cout << "Ââåäèòå êîëè÷åñòâî ýëåìåíòîâ: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²: ";
 				int numberOfNode = GetValue(INT_MIN, INT_MAX);
 				for (int i = 0; i < numberOfNode; i++)
 				{

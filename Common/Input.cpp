@@ -1,4 +1,4 @@
-#include "Input.h"
+ï»¿#include "Input.h"
 
 bool CheckingForInteger(string value)
 {
@@ -35,7 +35,7 @@ int GetValue(int min, int max)
 				|| stoll(inputValue) < min
 				|| stoll(inputValue) > max)
 			{
-				cout << endl << "Îøèáêà! Ïîïðîáóéòå åùå ðàç: ";
+				cout << endl << "ÐžÑˆÐ¸Ð±ÐºÐ°! ÐŸÐ¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÐµÑ‰Ðµ Ñ€Ð°Ð·: ";
 				inputValue.clear();
 			}
 			else
@@ -46,7 +46,7 @@ int GetValue(int min, int max)
 		}
 		else
 		{
-			cout << endl << "Îøèáêà! Ïîïðîáóéòå åùå ðàç: ";
+			cout << endl << "ÐžÑˆÐ¸Ð±ÐºÐ°! ÐŸÐ¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÐµÑ‰Ðµ Ñ€Ð°Ð·: ";
 			inputValue.clear();
 		}
 	}

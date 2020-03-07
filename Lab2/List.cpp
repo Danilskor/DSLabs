@@ -1,4 +1,4 @@
-#include "List.h"
+ï»¿#include "List.h"
 #include <ctime>
 
 bool CheckingForInteger(string);
@@ -19,13 +19,13 @@ List* CreateList()
 	list->Tail->Next = nullptr;
 	list->Tail->Prev = list->Head;
 
-	cout << "Ââåäèòå ïåðâîå çíà÷åíèÿ ñïèñêà [" << -maxValue <<';' << maxValue << "]\n";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿ÐµÑ€Ð²Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ ÑÐ¿Ð¸ÑÐºÐ° [" << -maxValue <<';' << maxValue << "]\n";
 	list->Head->Data = GetValue(-maxValue, maxValue);
-	cout << "Ââåäèòå âòîðîå çíà÷åíèÿ ñïèñêà [" << -maxValue << ';' << maxValue << "]\n";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ñ‚Ð¾Ñ€Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ñ ÑÐ¿Ð¸ÑÐºÐ° [" << -maxValue << ';' << maxValue << "]\n";
 	list->Tail->Data = GetValue(-maxValue, maxValue);
 
-	cout << "Çàïîëíèòü ðàíäîìíî ïîñëåäóþùèå " << nodeCount << " ÿ÷ååê?\n";
-	cout << "1-ÄÀ\n0-Íåò\n";
+	cout << "Ð—Ð°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÑŒ Ñ€Ð°Ð½Ð´Ð¾Ð¼Ð½Ð¾ Ð¿Ð¾ÑÐ»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ðµ " << nodeCount << " ÑÑ‡ÐµÐµÐº?\n";
+	cout << "1-Ð”Ð\n0-ÐÐµÑ‚\n";
 	randomValue = GetValue(0, 1);
 	if (randomValue == 1)
 	{
@@ -161,11 +161,11 @@ int LinearSearch(List *list, int searchElement)
 	{
 		if (currentNode->Data == searchElement)
 		{
-			cout << "Äà\t";
+			cout << "Ð”Ð°\t";
 		}
 		else
 		{
-			cout << "Íåò\t";
+			cout << "ÐÐµÑ‚\t";
 		}
 		currentNode = currentNode->Next;
 	}
@@ -189,15 +189,15 @@ void DeleteList(List *list)
 void PrintMenu()
 {
 	cout << "____________________MENU___________________\n";
-	cout << "|1 Äîáàâëåíèå ýëåìåíòà                    |\n";
-	cout << "|2 Óäàëåíèå ýëåìåíòà                      |\n";
-	cout << "|3 Âñòàâêà ýëåìåíòà â íà÷àëî              |\n";
-	cout << "|4 Âñòàâêà ýëåìåíòà â êîíåö               |\n";
-	cout << "|5 Âñòàâêà ïîñëå îïðåäåëåííîãî ýëåìåíòà   |\n";
-	cout << "|6 Âñòàâêà ïåðåä îïðåäåëåííûì ýëåìåíòîì   |\n";
-	cout << "|7 Ñîðòèðîâêà                             |\n";
-	cout << "|8 Ëèíåíûé ïîèñê ýëåìåíòà                 |\n";
-	cout << "|0 Âûõîä èç ïðîãðàììû                     |\n";
+	cout << "|1 Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°                    |\n";
+	cout << "|2 Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°                      |\n";
+	cout << "|3 Ð’ÑÑ‚Ð°Ð²ÐºÐ° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð² Ð½Ð°Ñ‡Ð°Ð»Ð¾              |\n";
+	cout << "|4 Ð’ÑÑ‚Ð°Ð²ÐºÐ° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð² ÐºÐ¾Ð½ÐµÑ†               |\n";
+	cout << "|5 Ð’ÑÑ‚Ð°Ð²ÐºÐ° Ð¿Ð¾ÑÐ»Ðµ Ð¾Ð¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð½Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°   |\n";
+	cout << "|6 Ð’ÑÑ‚Ð°Ð²ÐºÐ° Ð¿ÐµÑ€ÐµÐ´ Ð¾Ð¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð½Ñ‹Ð¼ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð¼   |\n";
+	cout << "|7 Ð¡Ð¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ°                             |\n";
+	cout << "|8 Ð›Ð¸Ð½ÐµÐ½Ñ‹Ð¹ Ð¿Ð¾Ð¸ÑÐº ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°                 |\n";
+	cout << "|0 Ð’Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹                     |\n";
 	cout << "|_________________________________________|\n";
 }
 
@@ -255,7 +255,7 @@ int GetValue(int min, int max)
 		getline(cin, inputValue);
 		if (CheckingForInteger(inputValue) == false || stoi(inputValue) < min || stoi(inputValue) > max)
 		{
-			cout << endl <<"Îøèáêà!: ïîïðîáóéòå åùå ðàç: ";
+			cout << endl <<"ÐžÑˆÐ¸Ð±ÐºÐ°!: Ð¿Ð¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ ÐµÑ‰Ðµ Ñ€Ð°Ð·: ";
 			inputValue.clear();
 		}
 		else
